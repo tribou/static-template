@@ -78,6 +78,7 @@
     "inert": "^4.0.3"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "deploy": "",
     "build": "cross-env NODE_ENV=production WEBPACK_ENV=client webpack --config config/webpack/index.js",
     "dev": "concurrently 'node bin/server.js' 'NODE_ENV=development WEBPACK_ENV=client webpack --colors --config config/webpack/index.js --watch'",
