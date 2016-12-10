@@ -1,21 +1,24 @@
+/*
+  NAMESPACE WITH 'sp' since we're not using css modules
+*/
 
 /* Sprites */
-.facebookIcon {
+.spFacebookIcon {
   @mixin sprite facebook-icon, 90px, 90px;
 }
 
-.instagramIcon {
+.spInstagramIcon {
   @mixin sprite instagram-icon, 90px, 90px;
 }
 
-.pinterestIcon {
+.spPinterestIcon {
   @mixin sprite pinterest-icon, 90px, 90px;
 }
 
-.twitterIcon {
+.spTwitterIcon {
   @mixin sprite twitter-icon, 90px, 90px;
 }
 
-.youtubeIcon {
+.spYoutubeIcon {
   @mixin sprite youtube-icon, 90px, 90px;
 }

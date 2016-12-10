@@ -2,7 +2,7 @@ import Debug from 'debug'
 import $ from 'jquery'
 import OfflineRuntime from 'offline-plugin/runtime'
 
-const log = Debug('my-app:browser:index')
+const log = Debug('static:index')
 
 window.jQuery = $
 window.$ = $

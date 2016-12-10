@@ -18,7 +18,7 @@ const loaders = [
   {
     test: /\.css$/,
     exclude: /node_modules/,
-    loader: cssLoaders.modules,
+    loader: cssLoaders.css,
   },
   {
     test: /node_modules.*\.css$/,
@@ -26,7 +26,7 @@ const loaders = [
   },
   {
     test: /\.html$/,
-    loader: 'html-loader',
+    loader: 'html-loader?interpolate',
   },
   {
     test: /\.json$/,

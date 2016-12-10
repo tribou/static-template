@@ -1,0 +1,13 @@
+/*
+  NAMESPACE by wrapping with the name of this module
+  since we're not using css-modules
+*/
+
+.test {
+  text-align: center;
+  color: $colorTheme;
+
+  .nested {
+    color: red;
+  }
+}

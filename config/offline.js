@@ -7,7 +7,6 @@ const { version } = require('../package.json')
 
 
 const offlineRoutes = [
-  // '/',
   // '/test',
 ]
 
@@ -23,6 +22,7 @@ module.exports = {
   publicPath: '/',
   externals: offlineRoutes,
   excludes: [
+    '**/*.html', // disable offline mode for routes for now
     '**/.*',
     '**/*.map',
     'robots.txt',

@@ -1,14 +1,20 @@
+/*
+  PLACE ALL IMAGE CLASSES HERE
+
+  Namespace with 'img' prefix since we're not using css-modules
+*/
+
 /* Requires images to be named according to mixins */
 
 /* PNGs */
-.logo {
+.imgLogo {
   @mixin image logo, 64px, 64px, 1;
 }
 
 
 /* JPGs */
 /*
-.jpgImage {
+.imgJpgImage {
   @mixin image-jpg jpg-image, 2560px, 1786px;
 
   @media (max-width: $screenSmMax) {
@@ -21,7 +27,7 @@
 
 /* One-off (no @2x version) */
 /*
-.logo {
-  @mixin image-url images/logo.png, 64px, 64px, 1;
+.imgLogo {
+  @mixin image-url ../../static/images/logo.png, 64px, 64px, 1;
 }
 */

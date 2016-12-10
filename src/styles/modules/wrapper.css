@@ -1,0 +1,14 @@
+/*
+  NAMESPACE by wrapping with the name of this module
+  since we're not using css-modules
+*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .somethingElse {
+  }
+}

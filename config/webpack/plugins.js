@@ -42,7 +42,7 @@ const client = [
     template: 'src/index.html',
   }),
   new HtmlInlineSourcePlugin(),
-  new ExtractTextPlugin('styles-[hash].css', { allChunks: true }),
+  new ExtractTextPlugin('[name]-[hash].css', { allChunks: true }),
   new AssetsPlugin({
     filename: '/build/assets.json',
   }),

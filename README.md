@@ -21,3 +21,5 @@ npm start
 # Start server with BrowserSync file watching and auto-reloading
 npm run dev
 ```
+
+You may need to restart the dev server if you add new files
