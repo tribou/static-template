@@ -82,8 +82,8 @@
     "postinstall": "npm run build",
     "deploy": "",
     "build": "cross-env NODE_ENV=production WEBPACK_ENV=client webpack --config config/webpack/index.js",
-    "dev": "concurrently 'node bin/server.js' 'NODE_ENV=development WEBPACK_ENV=client webpack --colors --config config/webpack/index.js --watch'",
-    "lint": "eslint --ignore-path .gitignore .",
+    "dev": "npm run yarn && concurrently 'node bin/server.js' 'NODE_ENV=development WEBPACK_ENV=client webpack --colors --config config/webpack/index.js --watch'",
+    "lint": "eslint --ignore-path .gitignore src config",
     "start": "node bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "yarn": "node bin/yarn-0.17.10.js install --ignore-scripts"
