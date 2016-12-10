@@ -1,0 +1,3 @@
+# static-template
+
+Static template
