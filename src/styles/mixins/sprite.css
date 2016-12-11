@@ -1,8 +1,17 @@
+/*
+  Specify the height and width of a single image of the @2x sprite.
+  It will be reduced by half for retina displays, and the normal version will
+  be used for normal displays.
+
+  Hover animation is built-in.
+*/
+
+/* Vertically-stacked sprites with hover states */
 @define-mixin sprite $name, $width, $height, $ratio: .5 {
   @media (max-resolution: 1dppx) {
-    background-image: url(../../static/sprites/$(name).png);
+    background-image: url(../../static/images/sprites/$(name).png);
   }
-  background-image: url(../../static/sprites/$(name)@2x.png);
+  background-image: url(../../static/images/sprites/$(name)@2x.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   background-size: calc($width * $ratio) calc($height * 2 * $ratio);

@@ -59,6 +59,7 @@
     "html-loader": "^0.4.4",
     "html-webpack-inline-source-plugin": "0.0.5",
     "html-webpack-plugin": "^2.24.1",
+    "imageoptim-cli": "^1.14.8",
     "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
     "nodemon": "^1.11.0",
@@ -67,6 +68,7 @@
     "postcss-calc": "^5.3.1",
     "postcss-loader": "^1.2.0",
     "precss": "^1.4.0",
+    "rimraf": "^2.5.4",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-node-externals": "^1.5.4"
@@ -80,8 +82,10 @@
   },
   "scripts": {
     "postinstall": "npm run build",
+    "optimize": "imageOptim -d static/images",
+    "preversion": "if [ $(git diff --name-only $(git describe --abbrev=0 --tags)..HEAD static/images/ | wc -c) -ne 0 ]; then npm run optimize; git add --all static/images; fi",
     "deploy": "",
-    "build": "cross-env NODE_ENV=production WEBPACK_ENV=client webpack --config config/webpack/index.js",
+    "build": "rimraf build && cross-env NODE_ENV=production WEBPACK_ENV=client webpack --config config/webpack/index.js",
     "dev": "npm run yarn && concurrently 'node bin/server.js' 'NODE_ENV=development WEBPACK_ENV=client webpack --colors --config config/webpack/index.js --watch'",
     "lint": "eslint --ignore-path .gitignore src config",
     "start": "node bin/server.js",
